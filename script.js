@@ -2,7 +2,7 @@
 // @name            AtCoder Submission Timer
 // @name:ja         AtCoder Submission Timer
 // @namespace       https://github.com/Coki628/ac-submission-timer
-// @version         1.0.1
+// @version         1.0.2
 // @description     AtCoderの問題画面にタイマーをセットして、指定時間後にコードを提出します。
 // @description:ja  AtCoderの問題画面にタイマーをセットして、指定時間後にコードを提出します。
 // @author          Coki628
@@ -59,7 +59,12 @@
                 $('#submit').trigger('click');
             }, millisec);
             // console.log('timer set');
-            $('#ac-sub-timer-info-text').html(`タイマーを${min}分後にセットしました。<br>${min}分後にコードが提出されます。`);
+            // 予定時刻を算出
+            const mo = moment().add(millisec, 'milliseconds');
+            $('#ac-sub-timer-info-text').html(`
+                タイマーを${min}分後にセットしました。<br>
+                ${min}分後にコードが提出されます。(${mo.hours()}時${mo.minutes()}分頃)
+            `);
         }
     });
 })();
