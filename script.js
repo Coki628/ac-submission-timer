@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name            AtCoder Submisson Timer
-// @name:ja         AtCoder Submisson Timer
-// @namespace       https://github.com/Coki628/ac-submisson-timer
-// @version         1.0.0
+// @name            AtCoder Submission Timer
+// @name:ja         AtCoder Submission Timer
+// @namespace       https://github.com/Coki628/ac-submission-timer
+// @version         1.0.1
 // @description     AtCoderの問題画面にタイマーをセットして、指定時間後にコードを提出します。
 // @description:ja  AtCoderの問題画面にタイマーをセットして、指定時間後にコードを提出します。
 // @author          Coki628
@@ -15,7 +15,7 @@
 
     $('#submit').after(`
         <button style="margin-left: 5px;" type="button" class="btn btn-secondary" id="ac-sub-timer-btn" data-toggle="modal" data-target="#ac-sub-timer-modal">
-            Submisson Timer
+            Submission Timer
         </button>
     `);
     $('#ac-sub-timer-btn').after(`
@@ -24,7 +24,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
-                        <h4 class="modal-title">AtCoder Submisson Timer</h4>
+                        <h4 class="modal-title">AtCoder Submission Timer</h4>
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
